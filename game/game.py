@@ -71,7 +71,7 @@ class AbstractGame(ABC):
     @property
     @abstractmethod
     def medicine(self) -> list[Medicine]:
-        """Аптечка."""
+        """Аптечка с лекарствами."""
         raise NotImplementedError
 
 

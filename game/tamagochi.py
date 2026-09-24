@@ -106,7 +106,7 @@ class SimpleTamagochi(AbstractTamagochi):
         self._energy = max(0, self._energy - 5)
 
     def play(self) -> None:
-        """Играет с питомцем."""
+        """Играет с питомцем: тратит энергию, повышает голод."""
         self._hunger = min(self.MAX_STAT, self._hunger + 15)
         self._energy = max(0, self._energy - 10)
         self._hp = max(0, self._hp - 3)
@@ -133,7 +133,7 @@ class SimpleTamagochi(AbstractTamagochi):
             self._is_sick = False
 
     def update(self) -> None:
-        """Обновляет состояние питомца.
+        """Обновляет состояние питомца (тик времени).
 
         :raises TamagochiIsGone: если HP упало до нуля.
         """

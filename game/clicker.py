@@ -36,6 +36,7 @@ class SimpleRandomClicker(AbstractClicker):
 
         :param min_income: минимальный доход за клик.
         :param max_income: максимальный доход за клик.
+        :raises ValueError: если min_income больше max_income.
         """
         if min_income > max_income:
             raise ValueError(
